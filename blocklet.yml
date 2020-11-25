@@ -1,0 +1,33 @@
+name: ipfs-deployer
+description: Blocklet to help you run IPFS nodes on ABT Node
+keywords:
+  - blocklet
+files:
+  - screenshots
+  - logo.png
+  - blocklet.md
+  - README.md
+author:
+  name: wangshijun
+  email: wangshijun@arcblock.io
+repository: blocklet/ipfs-deployer
+version: 0.1.0
+license: Apache-2.0
+group: dapp
+main: index.js
+logo: logo.png
+community: 'https://community.arcblockio.cn'
+support: support@arcblock.io
+documentation: 'https://docs.arcblock.io'
+homepage: 'https://github.com/blocklet/ipfs-deployer'
+interfaces:
+  - type: web
+    name: publicUrl
+    path: /
+screenshots: []
+environments: []
+scripts:
+  dev: npm run start
+timeout:
+  start: 10
+specVersion: 1.0.2

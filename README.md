@@ -19,6 +19,9 @@ Click the "Open in Gitpod" button, Gitpod will start ABT Node and the blocklet.
 npm install -g @abtnode/cli
 git clone git@github.com:blocklet/ipfs-deployer.git
 cd ipfs-deployer
+```
+
+```shell
 make init
 make run
 ```

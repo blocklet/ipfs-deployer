@@ -24,17 +24,23 @@
     "go-platform": "^1.0.0",
     "gunzip-maybe": "^1.4.2",
     "ipfs-http-client": "^48.1.2",
-    "ipfsd-ctl": "^7.1.0",
     "node-fetch": "^2.6.0",
     "tar-fs": "^2.1.0",
-    "unzip-stream": "^0.3.0"
+    "unzip-stream": "^0.3.0",
+    "debug": "^4.1.1",
+    "execa": "^4.0.0",
+    "fs-extra": "^9.0.0",
+    "merge-options": "^3.0.1",
+    "multiaddr": "^8.0.0",
+    "nanoid": "^3.1.3",
+    "p-wait-for": "^3.1.0",
+    "temp-write": "^4.0.0"
   },
   "scripts": {
     "lint": "eslint lib",
-    "clean": "rm -rf .blocklet",
-    "build": "yarn clean && npm run build:blocklet",
-    "bundle": "npm run clean && npm run build && abtnode bundle --create-release",
-    "deploy": "npm run release && abtnode deploy .blocklet/bundle"
+    "clean": "rm -rf .blocklet go-ipfs .ipfs",
+    "bundle": "npm run clean && an bundle --zip --create-release",
+    "deploy": "npm run bundle && an deploy .blocklet/bundle"
   },
   "lint-staged": {
     "*.{js,jsx,mjs,ts,tsx}": [

@@ -17,10 +17,18 @@
     "url": "https://github.com/blocklet/ipfs-deployer/issues",
     "email": "shijun@arcblock.io"
   },
-  "version": "0.1.0",
-  "dependencies": {},
+  "version": "0.7.0",
+  "dependencies": {
+    "go-platform": "^1.0.0",
+    "gunzip-maybe": "^1.4.2",
+    "ipfs-http-client": "^48.1.2",
+    "ipfsd-ctl": "^7.1.0",
+    "node-fetch": "^2.6.0",
+    "tar-fs": "^2.1.0",
+    "unzip-stream": "^0.3.0"
+  },
   "scripts": {
-    "lint": "eslint src api",
+    "lint": "eslint lib",
     "clean": "rm -rf .blocklet",
     "build": "yarn clean && npm run build:blocklet",
     "bundle": "npm run clean && npm run build && abtnode bundle --create-release",
@@ -45,11 +53,11 @@
     "babel-eslint": "^10.1.0",
     "eslint": "6.8.0",
     "eslint-config-airbnb": "18.1.0",
-    "eslint-plugin-jsx-a11y": "^6.1.1",
-    "eslint-plugin-react": "^7.11.0",
     "eslint-config-prettier": "latest",
     "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-prettier": "latest",
+    "eslint-plugin-react": "^7.11.0",
     "husky": "^4.2.3",
     "lint-staged": "^10.1.1",
     "prettier": "^2.0.2"

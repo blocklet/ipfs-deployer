@@ -6,7 +6,6 @@ echo "publish version ${VERSION}"
 git config --local user.name "wangshijun"
 git config --local user.email "wangshijun2010@gmail.com"
 
-
 echo "publishing to npm..."
 echo "SKIP_PREFLIGHT_CHECK=true" > .env
 npm run build

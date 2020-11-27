@@ -13,6 +13,10 @@ init: install dep
 travis-init:
 	@echo "Initialize software required for travis (normally ubuntu software)"
 
+github-init: install dep
+	@echo "Initialize software required for travis (normally ubuntu software)"
+	@sudo npm install -g @abtnode/cli
+
 install:
 	@echo "Install software required for this repo..."
 

@@ -1,5 +1,3 @@
-# WIP: DO NOT TRY UNTIL THIS LINE IS REMOVED
-
 # ipfs-deployer
 
 ![](https://github.com/blocklet/ipfs-deployer/workflows/release-blocklet/badge.svg)

@@ -3,3 +3,7 @@ node_modules
 .idea
 .DS_Store
 .blocklet
+ipfs
+.env
+.ipfs
+go-ipfs

@@ -17,14 +17,30 @@
     "url": "https://github.com/blocklet/ipfs-deployer/issues",
     "email": "shijun@arcblock.io"
   },
-  "version": "0.1.0",
-  "dependencies": {},
+  "version": "0.7.0",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "go-platform": "^1.0.0",
+    "gunzip-maybe": "^1.4.2",
+    "ipfs-http-client": "^48.1.2",
+    "node-fetch": "^2.6.0",
+    "tar-fs": "^2.1.0",
+    "unzip-stream": "^0.3.0",
+    "debug": "^4.1.1",
+    "execa": "^4.0.0",
+    "fs-extra": "^9.0.0",
+    "merge-options": "^3.0.1",
+    "multiaddr": "^8.0.0",
+    "nanoid": "^3.1.3",
+    "p-wait-for": "^3.1.0",
+    "temp-write": "^4.0.0"
+  },
   "scripts": {
-    "lint": "eslint src api",
-    "clean": "rm -rf .blocklet",
-    "build": "yarn clean && npm run build:blocklet",
-    "bundle": "npm run clean && npm run build && abtnode bundle --create-release",
-    "deploy": "npm run release && abtnode deploy .blocklet/bundle"
+    "lint": "eslint lib",
+    "clean": "rm -rf .blocklet go-ipfs .ipfs",
+    "bundle": "npm run clean && an bundle --zip --create-release",
+    "deploy": "npm run bundle && an deploy .blocklet/bundle"
   },
   "lint-staged": {
     "*.{js,jsx,mjs,ts,tsx}": [
@@ -37,19 +53,19 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged && lerna run precommit",
-      "pre-push": "lint-staged && lerna run prepush"
+      "pre-commit": "lint-staged",
+      "pre-push": "lint-staged"
     }
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "eslint": "6.8.0",
     "eslint-config-airbnb": "18.1.0",
-    "eslint-plugin-jsx-a11y": "^6.1.1",
-    "eslint-plugin-react": "^7.11.0",
     "eslint-config-prettier": "latest",
     "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-prettier": "latest",
+    "eslint-plugin-react": "^7.11.0",
     "husky": "^4.2.3",
     "lint-staged": "^10.1.1",
     "prettier": "^2.0.2"

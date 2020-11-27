@@ -1,20 +1,22 @@
 name: ipfs-deployer
 description: Blocklet to help you run IPFS nodes on ABT Node
-title: IPFS Deployer
 keywords:
   - blocklet
+author:
+  name: wangshijun
+  email: wangshijun@arcblock.io
+repository:
+  type: git
+  url: 'git+https://github.com/blocklet/ipfs-deployer.git'
+version: 0.2.0
+license: Apache-2.0
+title: IPFS Deployer
 files:
   - screenshots
   - logo.png
   - blocklet.md
   - README.md
   - lib/hooks/pre-start.js
-author:
-  name: wangshijun
-  email: wangshijun@arcblock.io
-repository: blocklet/ipfs-deployer
-version: 0.4.2
-license: Apache-2.0
 group: dapp
 main: lib/start.js
 logo: logo.png
@@ -26,24 +28,33 @@ interfaces:
   - type: web
     name: adminUrl
     path: /
+    prefix: '*'
+    protocol: tcp
+    port: BLOCKLET_PORT
   - type: web
     name: publicUrl
     path: /
-    port: 'IPFS_API_PORT'
+    port: IPFS_API_PORT
     prefix: /
+    protocol: tcp
   - type: service
     name: IPFS_GATEWAY
     port:
-      internal: 'IPFS_GATEWAY_PORT'
+      internal: IPFS_GATEWAY_PORT
       external: 6437
+    path: /
+    prefix: '*'
+    protocol: tcp
 screenshots: []
 environments:
   - name: IPFS_DIST_URL
     description: Where to download go-ipfs distributions
     required: true
     default: 'https://dist.ipfs.io'
+    secure: false
 scripts:
   preStart: node lib/hooks/pre-start.js
 timeout:
   start: 20
 specVersion: 1.0.2
+did: z8iZmFQz6TnBopopuEQegn1m6NabvuaCae7ps

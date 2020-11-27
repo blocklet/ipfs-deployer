@@ -28,6 +28,10 @@ make init
 make run
 ```
 
+## Notes
+
+For those who can not access https://dist.ipfs.io, please configure your blocklet to use https://releases.arcblockio.cn as `IPFS_DIST_URL`.
+
 ## Contribute
 
 > TODO

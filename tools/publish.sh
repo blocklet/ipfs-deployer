@@ -8,7 +8,7 @@ git config --local user.email "wangshijun2010@gmail.com"
 
 echo "publishing to npm..."
 echo "SKIP_PREFLIGHT_CHECK=true" > .env
-npm run build
+npm run bundle
 
 # TODO: if you want to publish to npm, uncomment the following and add `NPM_TOKEN` in travis/github-secrets
 # npm config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}"

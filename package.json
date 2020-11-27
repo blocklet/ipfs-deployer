@@ -17,7 +17,7 @@
     "url": "https://github.com/blocklet/ipfs-deployer/issues",
     "email": "shijun@arcblock.io"
   },
-  "version": "0.7.0",
+  "version": "0.8.0",
   "dependencies": {
     "dotenv": "^8.2.0",
     "express": "^4.17.1",

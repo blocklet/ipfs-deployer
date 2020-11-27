@@ -8,20 +8,22 @@ build:
 
 init: install dep
 	@echo "Initializing the repo..."
-	@npm install -g @abtnode/cli
 
 travis-init:
 	@echo "Initialize software required for travis (normally ubuntu software)"
 
-github-init: install dep
+github-init:
 	@echo "Initialize software required for travis (normally ubuntu software)"
-	@sudo npm install -g @abtnode/cli
+	@sudo npm install -g @abtnode/cli yarn
+	@yarn
 
 install:
 	@echo "Install software required for this repo..."
+	@npm install -g yarn @abtnode/cli
 
 dep:
 	@echo "Install dependencies required for this repo..."
+	@yarn
 
 pre-build: install dep
 	@echo "Running scripts before the build..."

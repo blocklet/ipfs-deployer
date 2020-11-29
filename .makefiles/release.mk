@@ -7,8 +7,8 @@ RELEASE_DATA='{"tag_name": "$(RELEASE_VERSION)", "name": "$(RELEASE_VERSION)", "
 RELEASE_URL=https://api.github.com/repos/ArcBlock/ipfs-deployer/releases
 
 release:
-	@git config --local user.name "Tyr Chen"
-	@git config --local user.email "tyr.chen@gmail.com"
+	@git config --local user.name "bot"
+	@git config --local user.email "bot@arcblock.io"
 	@git tag -a $(RELEASE_VERSION) -m "Release $(RELEASE_VERSION). Revision is: $(GIT_VERSION)" | true
 	@git push origin $(RELEASE_VERSION) | true
 

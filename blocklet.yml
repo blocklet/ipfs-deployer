@@ -1,14 +1,15 @@
 name: ipfs-deployer
 description: Blocklet to help you run IPFS nodes on ABT Node
 keywords:
-  - blocklet
+  - ipfs
+  - storage
 author:
   name: wangshijun
   email: wangshijun@arcblock.io
 repository:
   type: git
   url: 'git+https://github.com/blocklet/ipfs-deployer.git'
-version: 0.8.1
+version: 0.9.0
 license: Apache-2.0
 title: IPFS Deployer
 files:
@@ -29,22 +30,20 @@ interfaces:
     name: adminUrl
     path: /
     prefix: '*'
-    protocol: tcp
+    protocol: http
     port: BLOCKLET_PORT
   - type: web
     name: publicUrl
     path: /
     port: IPFS_API_PORT
     prefix: /
-    protocol: tcp
-  - type: service
-    name: IPFS_GATEWAY
-    port:
-      internal: IPFS_GATEWAY_PORT
-      external: 6437
+    protocol: http
+  - type: web
+    name: ipfs_gateway
+    port: IPFS_GATEWAY_PORT
     path: /
-    prefix: '*'
-    protocol: tcp
+    prefix: /
+    protocol: http
 screenshots: []
 environments:
   - name: IPFS_DIST_URL

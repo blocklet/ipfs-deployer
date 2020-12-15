@@ -1,3 +1,7 @@
+## 0.9.0 (December 15, 2020)
+  - chore: tune ipfs gateway from service to http endpoint
+  - [skip ci] Update README.md
+
 ## 0.8.1 (November 30, 2020)
 
 - fix: use bot to replace tyr when do github release

@@ -9,7 +9,7 @@ author:
 repository:
   type: git
   url: 'git+https://github.com/blocklet/ipfs-deployer.git'
-version: 0.9.1
+version: 0.9.2
 license: Apache-2.0
 title: IPFS Deployer
 files:

@@ -1,3 +1,6 @@
+## 0.9.2 (April 22, 2021)
+  - chore: add screenshots
+
 ## 0.9.1 (April 22, 2021)
   - feat: publish to official registry
 

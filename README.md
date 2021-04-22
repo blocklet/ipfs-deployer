@@ -28,9 +28,15 @@ make init
 make run
 ```
 
+Access the web UI by `http://localhost:{port}/webui`.
+
 ## Notes
 
 For those who can not access https://dist.ipfs.io, please configure your blocklet to use https://releases.arcblockio.cn as `IPFS_DIST_URL`.
+
+## Screenshots
+
+![web ui](./screenshots/webui.png)
 
 ## Contribute
 

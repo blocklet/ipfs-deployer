@@ -1,3 +1,6 @@
+## 0.9.1 (April 22, 2021)
+  - feat: publish to official registry
+
 ## 0.9.0 (December 15, 2020)
   - chore: tune ipfs gateway from service to http endpoint
   - [skip ci] Update README.md

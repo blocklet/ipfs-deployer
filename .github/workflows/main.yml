@@ -20,15 +20,10 @@ jobs:
 
       - name: Deploy
         env:
-          AWS_NODE_ENDPOINT: ${{ secrets.AWS_NODE_ENDPOINT }}
-          AWS_NODE_ACCESS_KEY: ${{ secrets.AWS_NODE_ACCESS_KEY }}
-          AWS_NODE_ACCESS_SECRET: ${{ secrets.AWS_NODE_ACCESS_SECRET }}
-          ALIYUN_NODE_ENDPOINT: ${{ secrets.ALIYUN_NODE_ENDPOINT }}
-          ALIYUN_NODE_ACCESS_SECRET: ${{ secrets.ALIYUN_NODE_ACCESS_SECRET }}
-          ALIYUN_NODE_ACCESS_KEY: ${{ secrets.ALIYUN_NODE_ACCESS_KEY }}
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GIT_HUB_TOKEN: ${{ secrets.GIT_HUB_TOKEN }}
+          BLOCKLET_REGISTRY: ${{ secrets.BLOCKLET_REGISTRY }}
+          ABTNODE_DEV_SK: ${{ secrets.ABTNODE_DEV_SK }}
         run: bash ./tools/publish.sh
 
       - name: Release to Github

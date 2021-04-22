@@ -39,8 +39,8 @@
   "scripts": {
     "lint": "eslint lib",
     "clean": "rm -rf .blocklet go-ipfs .ipfs",
-    "bundle": "npm run clean && abtnode bundle --zip --create-release",
-    "deploy": "npm run bundle && abtnode deploy .blocklet/bundle"
+    "bundle": "npm run clean && blocklet bundle --zip --create-release",
+    "deploy": "npm run bundle && blocklet deploy .blocklet/bundle"
   },
   "lint-staged": {
     "*.{js,jsx,mjs,ts,tsx}": [

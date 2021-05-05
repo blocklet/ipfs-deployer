@@ -7,7 +7,7 @@ Blocklet to help you run IPFS nodes on ABT Node
 
 ## Install on my ABT Node
 
-[![Install on my ABT Node](https://raw.githubusercontent.com/blocklet/development-guide/main/assets/install_on_abtnode.svg)](https://install.arcblock.io/?action=blocklet-install&meta_url=https%3A%2F%2Fgithub.com%2Fblocklet%2Fipfs-deployer%2Freleases%2Fdownload%2F0.9.2%2Fblocklet.json)
+[![Install on my ABT Node](https://raw.githubusercontent.com/blocklet/development-guide/main/assets/install_on_abtnode.svg)](https://install.arcblock.io/?action=blocklet-install&meta_url=https%3A%2F%2Fgithub.com%2Fblocklet%2Fipfs-deployer%2Freleases%2Fdownload%2F0.9.3%2Fblocklet.json)
 
 ## Run and debug in the cloud with Gitpod
 

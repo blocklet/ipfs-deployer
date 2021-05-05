@@ -9,7 +9,7 @@ author:
 repository:
   type: git
   url: 'git+https://github.com/blocklet/ipfs-deployer.git'
-version: 0.9.2
+version: 0.9.3
 license: Apache-2.0
 title: IPFS Deployer
 files:
@@ -55,7 +55,7 @@ scripts:
   preStart: node lib/hooks/pre-start.js
 timeout:
   start: 20
-specVersion: 1.0.2
+specVersion: 1.1.1
 did: z8iZmFQz6TnBopopuEQegn1m6NabvuaCae7ps
 charging:
   price: 0
@@ -66,3 +66,4 @@ requirements:
   os: '*'
   cpu: '*'
 children: []
+capabilities: {}

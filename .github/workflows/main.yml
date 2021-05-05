@@ -22,8 +22,8 @@ jobs:
         env:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
           GIT_HUB_TOKEN: ${{ secrets.GIT_HUB_TOKEN }}
-          BLOCKLET_REGISTRY: ${{ secrets.BLOCKLET_REGISTRY }}
-          ABTNODE_DEV_SK: ${{ secrets.ABTNODE_DEV_SK }}
+          BLOCKLET_REGISTRY: ${{ secrets.STAGING_REGISTRY }}
+          ABTNODE_DEV_SK: ${{ secrets.ABTNODE_DEV_STAGING_SK }}
         run: bash ./tools/publish.sh
 
       - name: Release to Github

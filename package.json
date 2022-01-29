@@ -24,7 +24,7 @@
     "go-platform": "^1.0.0",
     "gunzip-maybe": "^1.4.2",
     "ipfs-http-client": "^48.1.2",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.7",
     "tar-fs": "^2.1.0",
     "unzip-stream": "^0.3.0",
     "debug": "^4.1.1",

@@ -1,3 +1,8 @@
+## 0.9.4 (十二月 08, 2021)
+
+- chore: upgrade blocklet.yml
+- use blocklet workflow
+
 ## 0.9.3 (May 05, 2021)
 
 - chore: publish to dev registry

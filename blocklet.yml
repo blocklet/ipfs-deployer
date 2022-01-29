@@ -57,10 +57,9 @@ timeout:
   start: 20
 specVersion: 1.1.1
 did: z8iZmFQz6TnBopopuEQegn1m6NabvuaCae7ps
-charging:
-  price: 0
-  tokens: []
-  shares: []
+payment:
+  price: []
+  share: []
 requirements:
   abtnode: '>=1.1.0'
   os: '*'

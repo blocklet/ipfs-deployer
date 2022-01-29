@@ -3,8 +3,8 @@ name: release-blocklet
 on:
   push:
     branches:
-      - master
-      - main
+      - master-disabled
+      - main-disabled
 jobs:
   Deploy:
     runs-on: ubuntu-latest
@@ -15,18 +15,20 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v2
 
-      - name: Initialize
-        run: make github-init
-
-      - name: Deploy
-        env:
-          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-          GIT_HUB_TOKEN: ${{ secrets.GIT_HUB_TOKEN }}
-          BLOCKLET_REGISTRY: ${{ secrets.STAGING_REGISTRY }}
-          ABTNODE_DEV_SK: ${{ secrets.ABTNODE_DEV_STAGING_SK }}
-        run: bash ./tools/publish.sh
-
-      - name: Release to Github
-        uses: blocklet/action-release-to-github@v1.0.0
+      - name: Setup nodejs
+        uses: actions/setup-node@v2
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          node-version: 14
+          cache 'yarn'
+
+      - name: Initialize
+        run: yarn
+
+      - name: Blocklet workflow
+        uses: blocklet/action-workflow@v1
+        with:
+          skip-upload: false
+          bundle-command: yarn bundle
+          store-endpoint: ${{ secrets.STORE_ENDPOINT_DEV }}
+          store-access-token: ${{ secrets.STORE_ACCESS_TOKEN_DEV }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}

@@ -20,7 +20,7 @@
   "version": "0.9.4",
   "dependencies": {
     "dotenv": "^8.2.0",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "go-platform": "^1.0.0",
     "gunzip-maybe": "^1.4.2",
     "ipfs-http-client": "^48.1.2",
